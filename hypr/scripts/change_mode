@@ -1,0 +1,9 @@
+#!/bin/bash
+
+mode=$(hyprctl activewindow | grep -w "floating:" | sed -n "1p" | tr "\\t" " ")
+
+if [ "$mode" == " floating: 0" ]; then
+	hyprctl dispatch setfloating
+else
+	hyprctl dispatch settiled
+fi

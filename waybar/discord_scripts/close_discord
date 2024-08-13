@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for pid in $(pidof Discord); do
+	kill -15 "$pid"
+done
+

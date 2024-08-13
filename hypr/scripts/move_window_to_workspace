@@ -1,0 +1,9 @@
+#!/bin/bash
+
+workspace=$(cat /home/zan/.config/hypr/scripts/counter)
+
+if [ "$workspace" == "2" ]; then
+	hyprctl dispatch movetoworkspacesilent 3
+else
+	hyprctl dispatch movetoworkspacesilent 2
+fi

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+workspace=$(cat /home/zan/.config/hypr/scripts/counter)
+if [ "$workspace" == "2" ]; then
+	echo "3" > /home/zan/.config/hypr/scripts/counter
+	hyprctl dispatch workspace 3
+else
+	echo "2" > /home/zan/.config/hypr/scripts/counter
+	hyprctl dispatch workspace 2
+fi

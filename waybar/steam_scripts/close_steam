@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for pid in $(pidof steam); do
+        kill -15 "$pid"
+done
