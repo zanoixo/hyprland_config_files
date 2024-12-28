@@ -1,0 +1,5 @@
+#!/bin/bash
+
+openrgb --server &
+sleep 2
+openrgb -c 0000FF

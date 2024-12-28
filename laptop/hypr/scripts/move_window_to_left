@@ -1,0 +1,5 @@
+#!/bin/bash
+
+workspace=$(hyprctl activeworkspace -j | jq '.id')
+
+hyprctl dispatch movetoworkspacesilent $(($workspace - 1))
