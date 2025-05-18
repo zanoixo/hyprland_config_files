@@ -5,12 +5,10 @@ return {
         "nvim-lua/plenary.nvim",
         "nvim-tree/nvim-web-devicons",
         "MunifTanjim/nui.nvim",
-        },
-        lazy = false,
-        opts = {
-        },
+    },
+    lazy = false,
+    opts = {},
     config = function()
-        vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left<CR>', {})
-    end
+        vim.keymap.set("n", "<leader>n", ":Neotree filesystem reveal left<CR>", {})
+    end,
 }
-
