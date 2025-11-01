@@ -99,6 +99,17 @@ SessionManagementScreen {
                 passwordBox.forceActiveFocus()
             }
         }
+	background: Rectangle {
+            id: inputBackground
+            height: passwordBox.height
+            width: passwordBox.width
+            radius: 14
+            anchors.centerIn: parent
+            color: "transparent"
+            opacity: 1.0
+            border.color: "#ffffff"
+            border.width: 2
+        }
     }
     Button {
         id: loginButton
@@ -113,7 +124,7 @@ SessionManagementScreen {
         
         font.pointSize: config.fontSize
         font.family: config.font
-        opacity: enabled ? 1.0 : 0.7
+        opacity: enabled ? 1.0 : 1.0
 
         contentItem: Text {
             text: loginButton.text
@@ -131,26 +142,12 @@ SessionManagementScreen {
             radius: width / 2
             rotation: -90
             anchors.centerIn: parent
-
-            gradient: Gradient {
-                GradientStop { position: 0.0; color: "#20BDFF" }
-                GradientStop { position: 1.0; color: "#5433FF" }
-            }
+	    color: "transparent"
+	    opacity: 1.0
+	    border.color: "#ffffff"
+	    border.width: 2
         }
         onClicked: startLogin();
-    }
-
-
-    DropShadow {
-        anchors.fill: loginButton
-        horizontalOffset: 0
-        verticalOffset: 0
-        radius: 14
-        samples: 25
-        color: "#0072ff"
-        source: loginButton
-        z:-1
-        opacity: loginButton.enabled ? 1 : 0
     }
 
 }

@@ -313,11 +313,14 @@ PlasmaCore.ColorScope {
             }
         }
 
-        ColumnLayout {
-            id: actionButtonsColumn
+        RowLayout {
+            id: actionButtonsRow
             spacing: 10
             y: root.height / 2 - height / 2
-            anchors.left: formBg.left
+	    x: root.width / 2 - width / 2
+            anchors.bottom: formBg.bottom
+	    visible: false
+	    
 
             property bool showChangeUserButton: true
 
@@ -327,19 +330,19 @@ PlasmaCore.ColorScope {
 
                 actionButtonsColumn.showChangeUserButton = !actionButtonsColumn.showChangeUserButton
             }
-
+		
 
             ActionButton {
                 iconSource: Qt.resolvedUrl("assets/suspend.svgz")                      
                 onClicked: sddm.suspend()
                 enabled: sddm.canSuspend
-                visible: !inputPanel.keyboardActive
+                visible: false
             }
             ActionButton {
                 iconSource: Qt.resolvedUrl("assets/restart.svgz")
                 onClicked: sddm.reboot()
                 enabled: sddm.canReboot
-                visible: !inputPanel.keyboardActive
+                visible: false
             }
             ActionButton {
                 iconSource: Qt.resolvedUrl("assets/shutdown.svgz")
@@ -351,12 +354,12 @@ PlasmaCore.ColorScope {
                 iconSource: Qt.resolvedUrl("assets/change_user.svgz")
                 onClicked: actionButtonsColumn.changeMainstackView(1)
                 enabled: true
-                visible: !userListComponent.showUsernamePrompt && !inputPanel.keyboardActive && actionButtonsColumn.showChangeUserButton
+                visible: false
             }
             ActionButton {
                 iconSource: "go-previous"
                 onClicked: actionButtonsColumn.changeMainstackView(2)
-                visible: !inputPanel.keyboardActive && !actionButtonsColumn.showChangeUserButton
+                visible: false
             }
 
         }
@@ -364,24 +367,29 @@ PlasmaCore.ColorScope {
 
         Rectangle {
             id: formBg
-            width:  mainStack.width + actionButtonsColumn.width*2
-            height: root.height / 2
+            width:  mainStack.width
+            height: root.height / 3
             anchors.centerIn: mainStack
-            color: "#101013"
+            color: "transparent"
             radius: 10
-            opacity: 0.9
+            opacity: 1.0
             z:-1
+            border.color: "#ffffff"
+            border.width: 2
         }
 
         Rectangle {
             id: actionButtonsBg
-            width: actionButtonsColumn.width 
-            height: formBg.height
-            anchors.centerIn: actionButtonsColumn
+            width: mainStack.width + actionButtonsRow.width*2 
+            height: formBg.height / 10
+            anchors.centerIn: actionButtonsRow
             radius: 10
-            color: "#000000"
-            opacity: 0.35
+            color: "transparent"
+            opacity: 0.0
             z:-1
+	    border.color: "#ffffff"
+            border.width: 2
+
         }
 
         ShaderEffectSource {

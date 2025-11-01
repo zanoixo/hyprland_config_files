@@ -23,7 +23,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import QtQuick.Controls 1.3 as QQC
-
+        
 PlasmaComponents.ToolButton {
     id: root
     property int currentIndex: -1
@@ -31,15 +31,30 @@ PlasmaComponents.ToolButton {
     implicitWidth: minimumWidth
 
     visible: menu.items.length > 1
-
-    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Desktop Session: %1", instantiator.objectAt(currentIndex).text || "")
-
+   
+    Text {
+        anchors.fill: parent
+        anchors.centerIn: parent
+        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Desktop Session: %1", instantiator.objectAt(currentIndex).text || "")
+        color: "white" // Set text color here
+        font.pointSize: config.fontSize	
+    }
     font.pointSize: config.fontSize
-
+    text: "____________________________"
     Component.onCompleted: {
         currentIndex = sessionModel.lastIndex
     }
-
+    Rectangle {
+	id: menuBackground
+	height: root.height
+	width: root.width
+	radius: 10
+	color: "transparent"
+	opacity: 1.0
+	border.color: "transparent"
+	border.width: 2
+	
+    }
     menu: QQC.Menu {
         id: menu
         style: DropdownMenuStyle {}
@@ -57,3 +72,4 @@ PlasmaComponents.ToolButton {
         }
     }
 }
+

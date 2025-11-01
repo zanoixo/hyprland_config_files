@@ -1,0 +1,28 @@
+[2024-08-05 23:10:33.761] [info] Using configuration file /etc/xdg/waybar/config.jsonc
+[2024-08-05 23:10:33.764] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-08-05 23:10:33.764] [info] Using CSS file /etc/xdg/waybar/style.css
+[2024-08-05 23:10:33.774] [warning] module sway/workspaces: Disabling module "sway/workspaces", Socket path is empty
+[2024-08-05 23:10:33.777] [warning] module sway/mode: Disabling module "sway/mode", Socket path is empty
+[2024-08-05 23:10:33.779] [warning] module sway/scratchpad: Disabling module "sway/scratchpad", Socket path is empty
+[2024-08-05 23:10:33.810] [warning] module sway/workspaces: Disabling module "sway/workspaces", Socket path is empty
+[2024-08-05 23:10:33.812] [warning] module sway/mode: Disabling module "sway/mode", Socket path is empty
+[2024-08-05 23:10:33.814] [warning] module sway/scratchpad: Disabling module "sway/scratchpad", Socket path is empty
+[2024-08-05 23:10:34.045] [warning] Requested height: 30 is less than the minimum height: 42 required by the modules
+[2024-08-05 23:10:34.045] [info] Bar configured (width: 1920, height: 42) for output: DP-2
+[2024-08-05 23:10:34.045] [warning] Requested height: 30 is less than the minimum height: 42 required by the modules
+[2024-08-05 23:10:34.045] [info] Bar configured (width: 1920, height: 42) for output: HDMI-A-1
+Gdk-Message: 23:11:02.608: Unable to load arrow from the cursor theme
+[23911:23932:0805/231103.034294:ERROR:object_proxy.cc(576)] Failed to call method: org.freedesktop.DBus.Properties.Get: object_path= /org/freedesktop/portal/desktop: org.freedesktop.DBus.Error.InvalidArgs: No such interface “org.freedesktop.portal.FileChooser”
+[23911:23932:0805/231103.034325:ERROR:select_file_dialog_linux_portal.cc(287)] Failed to read portal version property
+Gdk-Message: 23:11:03.137: Unable to load arrow from the cursor theme
+src/gbm_drv_common.c:131: GBM-DRV error (get_bytes_per_component): Unknown or not supported format: 808530000
+
+src/gbm_drv_common.c:131: GBM-DRV error (get_bytes_per_component): Unknown or not supported format: 808530000
+
+src/gbm_drv_common.c:131: GBM-DRV error (get_bytes_per_component): Unknown or not supported format: 808530000
+
+src/gbm_drv_common.c:131: GBM-DRV error (get_bytes_per_component): Unknown or not supported format: 808530000
+
+src/gbm_drv_common.c:131: GBM-DRV error (get_bytes_per_component): Unknown or not supported format: 808530000
+
+[23911:23932:0805/231104.090460:ERROR:object_proxy.cc(576)] Failed to call method: org.freedesktop.DBus.StartServiceByName: object_path= /org/freedesktop/DBus: org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.

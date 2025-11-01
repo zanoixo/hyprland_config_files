@@ -1,0 +1,10 @@
+/home/zan/.config/rofi
+/home/zan/.config/hypr
+/home/zan/.config/kitty
+/etc/dunst
+/usr/share/sddm/themes/Sweet-Ambar-Blue
+/etc/xdg/waybar
+/home/zan/Pictures/wallpapers/images
+/home/zan/.config/kvantumTheme
+/home/zan/.local/share/color-schemes
+/home/zan/.local/share/icons

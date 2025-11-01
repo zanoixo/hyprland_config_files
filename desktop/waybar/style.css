@@ -384,10 +384,11 @@ label:focus {
 
 #custom-power {
     padding-left: 10px;
+    font-size: 13px;
 }
 
 #custom-logo {
-	background-image: url("/home/zan/Pictures/wallpapers/logo2.png");
+	background-image: url("/home/zan/Pictures/wallpapers/images/logo2.png");
 	background-repeat: no-repeat;
 }
 
