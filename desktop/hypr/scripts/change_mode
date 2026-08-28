@@ -3,7 +3,7 @@
 mode=$(hyprctl activewindow | grep -w "floating:" | sed -n "1p" | tr "\\t" " ")
 
 if [ "$mode" == " floating: 0" ]; then
-	hyprctl dispatch setfloating
+	hyprctl dispatch 'hl.dsp.window.float({ action = "set" })'
 else
-	hyprctl dispatch settiled
+	hyprctl dispatch 'hl.dsp.window.float({ action = "unset" })'
 fi

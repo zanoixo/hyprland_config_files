@@ -3,7 +3,7 @@
 workspace=$(cat /home/zan/.config/hypr/scripts/counter)
 
 if [ "$workspace" == "2" ]; then
-	hyprctl dispatch movetoworkspacesilent 3
+	hyprctl dispatch 'hl.dsp.window.move({ workspace = "3", follow = false })'
 else
-	hyprctl dispatch movetoworkspacesilent 2
+	hyprctl dispatch 'hl.dsp.window.move({ workspace = "2", follow = false })'
 fi
